@@ -33,7 +33,7 @@ function RegisterForm() {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data.error || "Registration failed");
+                throw new Error(data.error || "নিবন্ধন ব্যর্থ হয়েছে");
             }
 
             router.push("/login");
@@ -55,7 +55,7 @@ function RegisterForm() {
                     )}
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Full Name</label>
+                        <label className="block text-sm font-medium text-slate-700">পুরো নাম</label>
                         <div className="mt-1">
                             <input
                                 type="text"
@@ -68,7 +68,7 @@ function RegisterForm() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Email address</label>
+                        <label className="block text-sm font-medium text-slate-700">ইমেল ঠিকানা</label>
                         <div className="mt-1">
                             <input
                                 type="email"
@@ -81,7 +81,7 @@ function RegisterForm() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Password</label>
+                        <label className="block text-sm font-medium text-slate-700">পাসওয়ার্ড</label>
                         <div className="mt-1">
                             <input
                                 type="password"
@@ -94,17 +94,17 @@ function RegisterForm() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-slate-700">Register As</label>
+                        <label className="block text-sm font-medium text-slate-700">ভূমিকা নির্বাচন করুন</label>
                         <div className="mt-1">
                             <select
                                 value={role}
                                 onChange={(e) => setRole(e.target.value)}
                                 className="block w-full px-3 py-2 border border-slate-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm text-slate-900"
                             >
-                                <option value="User">Citizen</option>
-                                <option value="Kazi">Kazi</option>
-                                <option value="Jela">Jela Registry Office</option>
-                                <option value="Admin">Admin</option>
+                                <option value="User">নাগরিক</option>
+                                <option value="Kazi">কাজী</option>
+                                <option value="Jela">জেলা রেজিস্ট্রি অফিস</option>
+                                <option value="Admin">অ্যাডমিন</option>
                             </select>
                         </div>
                     </div>
@@ -115,7 +115,7 @@ function RegisterForm() {
                             disabled={loading}
                             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 transition"
                         >
-                            {loading ? "Registering..." : "Create Account"}
+                            {loading ? "নিবন্ধন করা হচ্ছে..." : "অ্যাকাউন্ট তৈরি করুন"}
                         </button>
                     </div>
                 </form>
@@ -132,17 +132,17 @@ export default function RegisterPage() {
                     <ShieldCheck className="w-12 h-12" />
                 </div>
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900">
-                    Create an account
+                    একটি অ্যাকাউন্ট তৈরি করুন
                 </h2>
                 <p className="mt-2 text-center text-sm text-slate-600">
-                    Or{" "}
+                    অথবা{" "}
                     <Link href="/login" className="font-medium text-emerald-600 hover:text-emerald-500">
-                        sign in to your existing account
+                        আপনার বিদ্যমান অ্যাকাউন্টে লগইন করুন
                     </Link>
                 </p>
             </div>
 
-            <Suspense fallback={<div className="text-center py-10">Loading form...</div>}>
+            <Suspense fallback={<div className="text-center py-10">ফর্ম লোড হচ্ছে...</div>}>
                 <RegisterForm />
             </Suspense>
         </div>

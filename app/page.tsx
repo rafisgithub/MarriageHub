@@ -9,16 +9,16 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-8 h-8 text-emerald-600" />
-            <span className="font-bold text-xl text-slate-800 tracking-tight">MarriageHub <span className="text-emerald-600">BD</span></span>
+            <span className="font-bold text-xl text-slate-800 tracking-tight">ম্যারিজহাব <span className="text-emerald-600">বিডি</span></span>
           </div>
           <nav className="hidden md:flex gap-6 font-medium text-slate-600">
-            <Link href="#features" className="hover:text-emerald-600 transition">Features</Link>
-            <Link href="#how-it-works" className="hover:text-emerald-600 transition">How it Works</Link>
-            <Link href="#statistics" className="hover:text-emerald-600 transition">Statistics</Link>
+            <Link href="#features" className="hover:text-emerald-600 transition">বৈশিষ্ট্য</Link>
+            <Link href="#how-it-works" className="hover:text-emerald-600 transition">কিভাবে কাজ করে</Link>
+            <Link href="#statistics" className="hover:text-emerald-600 transition">পরিসংখ্যান</Link>
           </nav>
           <div className="flex items-center gap-3">
-            <Link href="/login" className="text-slate-600 hover:text-slate-900 font-medium">Login</Link>
-            <Link href="/register" className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-md font-medium transition shadow-sm">Get Started</Link>
+            <Link href="/login" className="text-slate-600 hover:text-slate-900 font-medium">লগইন</Link>
+            <Link href="/register" className="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-md font-medium transition shadow-sm">শুরু করুন</Link>
           </div>
         </div>
       </header>
@@ -26,21 +26,21 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="pt-20 pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <div className="inline-block mb-4 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold tracking-wide uppercase">
-          Government of Bangladesh Initiative
+          বাংলাদেশ সরকারের একটি উদ্যোগ
         </div>
         <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-          Digital Marriage <br className="hidden md:block" /> Registration System
+          ডিজিটাল বিবাহ <br className="hidden md:block" /> নিবন্ধন সিস্টেম
         </h1>
         <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-          A secure, verified, and transparent platform for marriage registration. Streamlining the process for citizens, Kazis, and Registry Offices across the nation.
+          বিবাহ নিবন্ধনের জন্য একটি নিরাপদ, যাচাইকৃত এবং স্বচ্ছ প্ল্যাটফর্ম। নাগরিক, কাজী এবং রেজিস্ট্রি অফিসগুলির জন্য প্রক্রিয়াটি সহজতর করা হচ্ছে।
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/register?role=User" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition shadow-md flex items-center justify-center gap-2">
-            Apply Now
+            আবেদন করুন
             <FileText className="w-5 h-5" />
           </Link>
           <Link href="/register?role=Kazi" className="bg-white border-2 border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-700 px-8 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2">
-            Kazi Registration
+            কাজী নিবন্ধন
             <Users className="w-5 h-5" />
           </Link>
         </div>
@@ -50,14 +50,14 @@ export default function LandingPage() {
       <section id="features" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose the Digital System?</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">Modernizing marriage records for a safer and more reliable future.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">ডিজিটাল সিস্টেম কেন বেছে নেবেন?</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">একটি নিরাপদ এবং নির্ভরযোগ্য ভবিষ্যতের জন্য বিবাহ রেকর্ড আধুনিকীকরণ করা হচ্ছে।</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
-            <FeatureCard icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />} title="Secure" description="End-to-end encryption and robust role-based access control protecting citizen data." />
-            <FeatureCard icon={<FileCheck className="w-8 h-8 text-emerald-600" />} title="Verified" description="Multi-tier verification process involving Kazis and Jela Registry Offices." />
-            <FeatureCard icon={<Eye className="w-8 h-8 text-emerald-600" />} title="Transparent" description="Track application status in real-time. No hidden processes or delays." />
-            <FeatureCard icon={<Zap className="w-8 h-8 text-emerald-600" />} title="Fast" description="Digital document uploads and automated routing drastically reduce processing time." />
+            <FeatureCard icon={<ShieldCheck className="w-8 h-8 text-emerald-600" />} title="নিরাপদ" description="এন্ড-টু-এন্ড এনক্রিপশন এবং শক্তিশালী ভূমিকা-ভিত্তিক অ্যাক্সেস নিয়ন্ত্রণ নাগরিকের ডেটা সুরক্ষা করে।" />
+            <FeatureCard icon={<FileCheck className="w-8 h-8 text-emerald-600" />} title="যাচাইকৃত" description="কাজী এবং জেলা রেজিস্ট্রি অফিসগুলির মাধ্যমে বহুমুখী যাচাইকরণ প্রক্রিয়া।" />
+            <FeatureCard icon={<Eye className="w-8 h-8 text-emerald-600" />} title="স্বচ্ছ" description="রিয়েল-টাইমে আবেদনের স্থিতি ট্র্যাক করুন। কোনো লুকানো প্রক্রিয়া বা বিলম্ব নেই।" />
+            <FeatureCard icon={<Zap className="w-8 h-8 text-emerald-600" />} title="দ্রুত" description="ডিজিটাল ডকুমেন্ট আপলোড এবং স্বয়ংক্রিয় রাউটিং প্রক্রিয়াকরণের সময় উল্লেখযোগ্যভাবে হ্রাস করে।" />
           </div>
         </div>
       </section>
@@ -66,14 +66,14 @@ export default function LandingPage() {
       <section id="how-it-works" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">How It Works</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">A simple 4-step process to complete your registration.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">কিভাবে কাজ করে</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">আপনার নিবন্ধন সম্পূর্ণ করার জন্য একটি সহজ ৪-ধাপ প্রক্রিয়া।</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 relative">
-            <StepCard number="1" title="Register Account" description="Create an account as a citizen and log into your dashboard." />
-            <StepCard number="2" title="Submit Details" description="Fill out the marriage application form and upload required ID documents." />
-            <StepCard number="3" title="Kazi Verification" description="Your selected Kazi reviews and verifies the marriage details." />
-            <StepCard number="4" title="Final Approval" description="Jela Registry Office provides the final seal of approval." />
+            <StepCard number="1" title="অ্যাকাউন্ট নিবন্ধন" description="নাগরিক হিসেবে একটি অ্যাকাউন্ট তৈরি করুন এবং আপনার ড্যাশবোর্ডে লগইন করুন।" />
+            <StepCard number="2" title="তথ্য জমা দিন" description="বিবাহের আবেদনপত্র পূরণ করুন এবং প্রয়োজনীয় ডকুমেন্ট আপলোড করুন।" />
+            <StepCard number="3" title="কাজী যাচাইকরণ" description="আপনার নির্বাচিত কাজী বিবাহের বিবরণ পর্যালোচনা এবং যাচাই করেন।" />
+            <StepCard number="4" title="চূড়ান্ত অনুমোদন" description="জেলা রেজিস্ট্রি অফিস চূড়ান্ত অনুমোদন প্রদান করে।" />
           </div>
         </div>
       </section>
@@ -82,9 +82,9 @@ export default function LandingPage() {
       <section id="statistics" className="py-20 bg-emerald-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <StatCard icon={<Building2 className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="64" label="Total Districts Covered" />
-            <StatCard icon={<Users className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="4,500+" label="Registered Kazis" />
-            <StatCard icon={<FileCheck className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="120K+" label="Completed Registrations" />
+            <StatCard icon={<Building2 className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="৬৪" label="অন্তর্ভুক্ত জেলাসমূহ" />
+            <StatCard icon={<Users className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="৪,৫০০+" label="নিবন্ধিত কাজী" />
+            <StatCard icon={<FileCheck className="w-10 h-10 mx-auto mb-4 text-emerald-400" />} number="১ লাখ+" label="সম্পন্ন নিবন্ধন" />
           </div>
         </div>
       </section>
@@ -94,15 +94,15 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center gap-2 mb-6 text-white">
             <ShieldCheck className="w-6 h-6 text-emerald-500" />
-            <span className="font-bold text-xl tracking-tight">MarriageHub <span className="text-emerald-500">BD</span></span>
+            <span className="font-bold text-xl tracking-tight">ম্যারিজহাব <span className="text-emerald-500">বিডি</span></span>
           </div>
-          <p className="mb-4">Digitalizing the marriage registration process across Bangladesh.</p>
+          <p className="mb-4">পুরো বাংলাদেশ জুড়ে বিবাহ নিবন্ধন প্রক্রিয়া ডিজিটালাইজ করা হচ্ছে।</p>
           <div className="flex justify-center gap-6 mb-8 text-sm">
-            <a href="#" className="hover:text-white transition">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition">Terms of Service</a>
-            <a href="#" className="hover:text-white transition">Contact Support</a>
+            <a href="#" className="hover:text-white transition">গোপনীয়তা নীতি</a>
+            <a href="#" className="hover:text-white transition">পরিষেবার শর্তাবলী</a>
+            <a href="#" className="hover:text-white transition">সহায়তা কেন্দ্রে যোগাযোগ</a>
           </div>
-          <p className="text-sm">© {new Date().getFullYear()} Government of Bangladesh. All rights reserved.</p>
+          <p className="text-sm">© {new Date().getFullYear()} বাংলাদেশ সরকার। সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
       </footer>
     </div>

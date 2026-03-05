@@ -26,7 +26,7 @@ export default async function DashboardLayout({
             <div className="flex-1 flex flex-col overflow-hidden">
                 <header className="h-16 bg-white border-b border-slate-200 flex items-center px-8 shadow-sm z-10 justify-between">
                     <h1 className="font-semibold text-slate-800 text-lg">
-                        {payload.role} Dashboard
+                        {payload.role} ড্যাশবোর্ড
                     </h1>
                     <div className="flex items-center gap-4">
                         <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">

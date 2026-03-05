@@ -27,7 +27,7 @@ export default function LoginPage() {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data.error || "Login failed");
+                throw new Error(data.error || "লগইন ব্যর্থ হয়েছে");
             }
 
             router.push("/dashboard");
@@ -45,12 +45,12 @@ export default function LoginPage() {
                     <ShieldCheck className="w-12 h-12" />
                 </div>
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900">
-                    Sign in to your account
+                    আপনার অ্যাকাউন্টে লগইন করুন
                 </h2>
                 <p className="mt-2 text-center text-sm text-slate-600">
-                    Or{" "}
+                    অথবা{" "}
                     <Link href="/register" className="font-medium text-emerald-600 hover:text-emerald-500">
-                        register for a new account
+                        নতুন অ্যাকাউন্টের জন্য নিবন্ধন করুন
                     </Link>
                 </p>
             </div>
@@ -65,7 +65,7 @@ export default function LoginPage() {
                         )}
 
                         <div>
-                            <label className="block text-sm font-medium text-slate-700">Email address</label>
+                            <label className="block text-sm font-medium text-slate-700">ইমেল ঠিকানা</label>
                             <div className="mt-1">
                                 <input
                                     type="email"
@@ -78,7 +78,7 @@ export default function LoginPage() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-slate-700">Password</label>
+                            <label className="block text-sm font-medium text-slate-700">পাসওয়ার্ড</label>
                             <div className="mt-1">
                                 <input
                                     type="password"
@@ -96,7 +96,7 @@ export default function LoginPage() {
                                 disabled={loading}
                                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 transition"
                             >
-                                {loading ? "Signing in..." : "Sign in"}
+                                {loading ? "লগইন করা হচ্ছে..." : "লগইন"}
                             </button>
                         </div>
                     </form>
