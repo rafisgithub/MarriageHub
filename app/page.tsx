@@ -24,25 +24,31 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <div className="inline-block mb-4 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold tracking-wide uppercase">
-          বাংলাদেশ সরকারের একটি উদ্যোগ
-        </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-          ডিজিটাল বিবাহ <br className="hidden md:block" /> নিবন্ধন সিস্টেম
-        </h1>
-        <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-          বিবাহ নিবন্ধনের জন্য একটি নিরাপদ, যাচাইকৃত এবং স্বচ্ছ প্ল্যাটফর্ম। নাগরিক, কাজী এবং রেজিস্ট্রি অফিসগুলির জন্য প্রক্রিয়াটি সহজতর করা হচ্ছে।
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/register?role=User" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition shadow-md flex items-center justify-center gap-2">
-            আবেদন করুন
-            <FileText className="w-5 h-5" />
-          </Link>
-          <Link href="/register?role=Kazi" className="bg-white border-2 border-slate-200 hover:border-emerald-600 hover:text-emerald-600 text-slate-700 px-8 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center gap-2">
-            কাজী নিবন্ধন
-            <Users className="w-5 h-5" />
-          </Link>
+      <section
+        className="relative pt-32 pb-40 px-4 sm:px-6 lg:px-8 text-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/bangladesh_wedding_background.png')" }}
+      >
+        <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-sm font-bold tracking-wide uppercase backdrop-blur-sm">
+            বাংলাদেশ সরকারের একটি উদ্যোগ
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-md pb-2">
+            ডিজিটাল বিবাহ <br className="hidden md:block" /> নিবন্ধন সিস্টেম
+          </h1>
+          <p className="text-xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow">
+            বিবাহ নিবন্ধনের জন্য একটি নিরাপদ, যাচাইকৃত এবং স্বচ্ছ প্ল্যাটফর্ম। নাগরিক, কাজী এবং রেজিস্ট্রি অফিসগুলির জন্য প্রক্রিয়াটি সহজতর করা হচ্ছে।
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/register?role=User" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-lg text-lg font-bold transition shadow-lg hover:shadow-emerald-600/30 flex items-center justify-center gap-2">
+              আবেদন করুন
+              <FileText className="w-5 h-5" />
+            </Link>
+            <Link href="/register?role=Kazi" className="bg-white/10 hover:bg-white/20 border-2 border-white/20 text-white hover:border-white/50 px-8 py-3.5 rounded-lg text-lg font-bold transition backdrop-blur-sm flex items-center justify-center gap-2">
+              কাজী নিবন্ধন
+              <Users className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
 
